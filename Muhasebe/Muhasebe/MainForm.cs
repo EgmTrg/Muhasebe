@@ -24,8 +24,7 @@ namespace Muhasebe
             if (page.IsDisposed)
             {
                 page = new StokTakip();
-                page.MdiParent = this;
-                page.ShowDialog();
+                page.Show();
             }
             else
                 page.BringToFront();
