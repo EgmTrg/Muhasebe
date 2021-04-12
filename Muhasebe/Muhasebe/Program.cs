@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Muhasebe.LoginRegister;
+using System;
 using System.Windows.Forms;
 
 namespace Muhasebe
@@ -16,7 +14,7 @@ namespace Muhasebe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Login());
         }
     }
 }
