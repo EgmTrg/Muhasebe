@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="ORMBase.cs" />
     <Compile Include="Tables\Users.cs" />
+    <Compile Include="Tools.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
