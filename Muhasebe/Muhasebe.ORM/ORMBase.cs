@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Reflection;
 
 namespace Muhasebe.ORM
 {
@@ -22,7 +23,14 @@ namespace Muhasebe.ORM
 
         public bool Insert(Table t)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = $"Insert_{myVariableType.Name}";
+            cmd.Connection = Tools.Connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            PropertyInfo[] props = myVariableType.GetProperties();
+            foreach (var prop in props)
+                cmd.Parameters.AddWithValue($"@{prop.Name}", prop.GetValue(t));
+            return Tools.ExecuteQuerry(cmd);
         }
 
         public bool Update(Table t)
