@@ -1,5 +1,4 @@
-﻿using Muhasebe.LoginRegister;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Muhasebe

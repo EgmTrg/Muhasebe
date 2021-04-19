@@ -42,6 +42,13 @@ namespace Muhasebe
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.register_panel = new System.Windows.Forms.Panel();
+            this.emainAgainOnRegister_textBox = new System.Windows.Forms.TextBox();
+            this.emailOnRegister_textBox = new System.Windows.Forms.TextBox();
+            this.registerOnRegister_button = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.passwordAgainOnRegister_maskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.alreadyHave_button = new System.Windows.Forms.Button();
             this.passwordOnRegister_maskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.usernameOnRegister_textBox = new System.Windows.Forms.TextBox();
@@ -49,18 +56,11 @@ namespace Muhasebe
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.label7 = new System.Windows.Forms.Label();
-            this.passwordAgainOnRegister_maskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.registerOnRegister_button = new System.Windows.Forms.Button();
-            this.emailOnRegister_textBox = new System.Windows.Forms.TextBox();
-            this.emainAgainOnRegister_textBox = new System.Windows.Forms.TextBox();
             this.login_panel.SuspendLayout();
             this.register_panel.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +96,7 @@ namespace Muhasebe
             this.loginOnLogin_button.TabIndex = 4;
             this.loginOnLogin_button.Text = "Login";
             this.loginOnLogin_button.UseVisualStyleBackColor = false;
-            this.loginOnLogin_button.Click += new System.EventHandler(this.login_button_Click);
+            this.loginOnLogin_button.Click += new System.EventHandler(this.loginOnLogin_button_Click);
             // 
             // registerOnLogin_button
             // 
@@ -228,6 +228,84 @@ namespace Muhasebe
             this.register_panel.Size = new System.Drawing.Size(317, 475);
             this.register_panel.TabIndex = 1;
             // 
+            // emainAgainOnRegister_textBox
+            // 
+            this.emainAgainOnRegister_textBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.emainAgainOnRegister_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emainAgainOnRegister_textBox.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.emainAgainOnRegister_textBox.Location = new System.Drawing.Point(6, 379);
+            this.emainAgainOnRegister_textBox.Name = "emainAgainOnRegister_textBox";
+            this.emainAgainOnRegister_textBox.Size = new System.Drawing.Size(298, 24);
+            this.emainAgainOnRegister_textBox.TabIndex = 4;
+            // 
+            // emailOnRegister_textBox
+            // 
+            this.emailOnRegister_textBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.emailOnRegister_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailOnRegister_textBox.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.emailOnRegister_textBox.Location = new System.Drawing.Point(6, 319);
+            this.emailOnRegister_textBox.Name = "emailOnRegister_textBox";
+            this.emailOnRegister_textBox.Size = new System.Drawing.Size(298, 24);
+            this.emailOnRegister_textBox.TabIndex = 3;
+            // 
+            // registerOnRegister_button
+            // 
+            this.registerOnRegister_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
+            this.registerOnRegister_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.registerOnRegister_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
+            this.registerOnRegister_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(167)))), ((int)(((byte)(153)))));
+            this.registerOnRegister_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerOnRegister_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.registerOnRegister_button.ForeColor = System.Drawing.Color.Snow;
+            this.registerOnRegister_button.Location = new System.Drawing.Point(170, 432);
+            this.registerOnRegister_button.Name = "registerOnRegister_button";
+            this.registerOnRegister_button.Size = new System.Drawing.Size(138, 40);
+            this.registerOnRegister_button.TabIndex = 6;
+            this.registerOnRegister_button.Text = "Register";
+            this.registerOnRegister_button.UseVisualStyleBackColor = false;
+            this.registerOnRegister_button.Click += new System.EventHandler(this.registerOnRegister_button_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(3, 355);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 21);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "E-mail Again";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(3, 295);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 21);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "E-mail";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(3, 225);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 21);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Password Again";
+            // 
+            // passwordAgainOnRegister_maskedTextBox
+            // 
+            this.passwordAgainOnRegister_maskedTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.passwordAgainOnRegister_maskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordAgainOnRegister_maskedTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.passwordAgainOnRegister_maskedTextBox.Location = new System.Drawing.Point(7, 249);
+            this.passwordAgainOnRegister_maskedTextBox.Name = "passwordAgainOnRegister_maskedTextBox";
+            this.passwordAgainOnRegister_maskedTextBox.Size = new System.Drawing.Size(298, 24);
+            this.passwordAgainOnRegister_maskedTextBox.TabIndex = 2;
+            this.passwordAgainOnRegister_maskedTextBox.UseSystemPasswordChar = true;
+            // 
             // alreadyHave_button
             // 
             this.alreadyHave_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
@@ -240,7 +318,7 @@ namespace Muhasebe
             this.alreadyHave_button.Location = new System.Drawing.Point(7, 432);
             this.alreadyHave_button.Name = "alreadyHave_button";
             this.alreadyHave_button.Size = new System.Drawing.Size(157, 40);
-            this.alreadyHave_button.TabIndex = 3;
+            this.alreadyHave_button.TabIndex = 5;
             this.alreadyHave_button.Text = "Already Have";
             this.alreadyHave_button.UseVisualStyleBackColor = false;
             this.alreadyHave_button.Click += new System.EventHandler(this.register_button_Click);
@@ -311,6 +389,30 @@ namespace Muhasebe
             this.shapeContainer2.TabIndex = 4;
             this.shapeContainer2.TabStop = false;
             // 
+            // lineShape8
+            // 
+            this.lineShape8.Name = "lineShape8";
+            this.lineShape8.X1 = 6;
+            this.lineShape8.X2 = 307;
+            this.lineShape8.Y1 = 403;
+            this.lineShape8.Y2 = 403;
+            // 
+            // lineShape6
+            // 
+            this.lineShape6.Name = "lineShape6";
+            this.lineShape6.X1 = 6;
+            this.lineShape6.X2 = 307;
+            this.lineShape6.Y1 = 343;
+            this.lineShape6.Y2 = 343;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.X1 = 7;
+            this.lineShape5.X2 = 307;
+            this.lineShape5.Y1 = 273;
+            this.lineShape5.Y2 = 273;
+            // 
             // lineShape3
             // 
             this.lineShape3.Name = "lineShape2";
@@ -327,108 +429,7 @@ namespace Muhasebe
             this.lineShape4.Y1 = 133;
             this.lineShape4.Y2 = 133;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(3, 225);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 21);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Password Again";
-            // 
-            // passwordAgainOnRegister_maskedTextBox
-            // 
-            this.passwordAgainOnRegister_maskedTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.passwordAgainOnRegister_maskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordAgainOnRegister_maskedTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.passwordAgainOnRegister_maskedTextBox.Location = new System.Drawing.Point(7, 249);
-            this.passwordAgainOnRegister_maskedTextBox.Name = "passwordAgainOnRegister_maskedTextBox";
-            this.passwordAgainOnRegister_maskedTextBox.Size = new System.Drawing.Size(298, 24);
-            this.passwordAgainOnRegister_maskedTextBox.TabIndex = 1;
-            this.passwordAgainOnRegister_maskedTextBox.UseSystemPasswordChar = true;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 7;
-            this.lineShape5.X2 = 307;
-            this.lineShape5.Y1 = 273;
-            this.lineShape5.Y2 = 273;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(3, 295);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 21);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "E-mail";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(3, 355);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 21);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "E-mail Again";
-            // 
-            // lineShape6
-            // 
-            this.lineShape6.Name = "lineShape6";
-            this.lineShape6.X1 = 6;
-            this.lineShape6.X2 = 307;
-            this.lineShape6.Y1 = 343;
-            this.lineShape6.Y2 = 343;
-            // 
-            // lineShape8
-            // 
-            this.lineShape8.Name = "lineShape8";
-            this.lineShape8.X1 = 6;
-            this.lineShape8.X2 = 307;
-            this.lineShape8.Y1 = 403;
-            this.lineShape8.Y2 = 403;
-            // 
-            // registerOnRegister_button
-            // 
-            this.registerOnRegister_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.registerOnRegister_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.registerOnRegister_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.registerOnRegister_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(167)))), ((int)(((byte)(153)))));
-            this.registerOnRegister_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerOnRegister_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.registerOnRegister_button.ForeColor = System.Drawing.Color.Snow;
-            this.registerOnRegister_button.Location = new System.Drawing.Point(170, 432);
-            this.registerOnRegister_button.Name = "registerOnRegister_button";
-            this.registerOnRegister_button.Size = new System.Drawing.Size(138, 40);
-            this.registerOnRegister_button.TabIndex = 3;
-            this.registerOnRegister_button.Text = "Register";
-            this.registerOnRegister_button.UseVisualStyleBackColor = false;
-            // 
-            // emailOnRegister_textBox
-            // 
-            this.emailOnRegister_textBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.emailOnRegister_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emailOnRegister_textBox.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.emailOnRegister_textBox.Location = new System.Drawing.Point(6, 319);
-            this.emailOnRegister_textBox.Name = "emailOnRegister_textBox";
-            this.emailOnRegister_textBox.Size = new System.Drawing.Size(298, 24);
-            this.emailOnRegister_textBox.TabIndex = 0;
-            // 
-            // emainAgainOnRegister_textBox
-            // 
-            this.emainAgainOnRegister_textBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.emainAgainOnRegister_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emainAgainOnRegister_textBox.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.emainAgainOnRegister_textBox.Location = new System.Drawing.Point(6, 379);
-            this.emainAgainOnRegister_textBox.Name = "emainAgainOnRegister_textBox";
-            this.emainAgainOnRegister_textBox.Size = new System.Drawing.Size(298, 24);
-            this.emainAgainOnRegister_textBox.TabIndex = 0;
-            // 
-            // Login
+            // LoginRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -436,10 +437,11 @@ namespace Muhasebe
             this.ClientSize = new System.Drawing.Size(662, 497);
             this.Controls.Add(this.register_panel);
             this.Controls.Add(this.login_panel);
-            this.Name = "Login";
+            this.Name = "LoginRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginRegister_KeyDown);
             this.login_panel.ResumeLayout(false);
             this.login_panel.PerformLayout();
             this.register_panel.ResumeLayout(false);

@@ -8,7 +8,7 @@ namespace Muhasebe.ORM
     public class ORMBase<Table> : IORM<Table> where Table : class
     {
         public Type myVariableType { get { return typeof(Table); } }
-        public DataTable SelectDB()
+        public DataTable Select()
         {
             DataTable dt = new DataTable();
             SqlDataAdapter adp = new SqlDataAdapter();
@@ -20,6 +20,7 @@ namespace Muhasebe.ORM
             adp.Fill(dt);
             return dt;
         }
+
         public bool Insert(Table t)
         {
             SqlCommand cmd = new SqlCommand();
@@ -31,10 +32,12 @@ namespace Muhasebe.ORM
                 cmd.Parameters.AddWithValue($"@{prop.Name}", prop.GetValue(t));
             return Tools.ExecuteQuerry(cmd);
         }
+
         public bool Update(Table t)
         {
             throw new NotImplementedException();
         }
+
         public bool Delete(int id)
         {
             throw new NotImplementedException();

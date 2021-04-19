@@ -90,8 +90,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Muhasebe.Entity\Muhasebe.Entity.csproj">
+      <Project>{101c0da7-e681-4f4a-9418-574fbc6b6a39}</Project>
+      <Name>Muhasebe.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Muhasebe.ORM\Muhasebe.ORM.csproj">
-      <Project>{ca38a87f-ceee-44a0-8f2e-bcd98191f63b}</Project>
+      <Project>{c4e47034-453b-4708-b57f-72f1f01515b6}</Project>
       <Name>Muhasebe.ORM</Name>
     </ProjectReference>
   </ItemGroup>
