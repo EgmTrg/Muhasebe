@@ -2,8 +2,8 @@
 {
     public class User : TableObjects
     {
-        public override string PrimaryKey => "UsersID";
-        public int UserID { get;}
+        public override string PrimaryKey => "UserID";
+        public int UserID { get; set; }
         public string  Name { get; set; }
         public string Password { get; set; }
         public bool isAdmin { get; set; }

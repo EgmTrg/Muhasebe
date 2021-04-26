@@ -45,7 +45,7 @@
     <Compile Include="IORM.cs" />
     <Compile Include="ORMBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tables\Users.cs" />
+    <Compile Include="Tables\User.cs" />
     <Compile Include="Tools.cs" />
   </ItemGroup>
   <ItemGroup>

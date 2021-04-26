@@ -1,9 +1,12 @@
-﻿using System.Windows.Forms;
+﻿using Muhasebe.ORM.Tables;
+using System.Windows.Forms;
 
 namespace Muhasebe
 {
     public partial class LoginRegister : Form
     {
+        User user_TABLES = new User();
+
         public LoginRegister()
         {
             InitializeComponent();
@@ -30,16 +33,26 @@ namespace Muhasebe
         #region Buttons Properties
         private void loginOnLogin_button_Click(object sender, System.EventArgs e)
         {
-            bool loginStatus = new ORM.Tables.Users().Login(usernameOnLogin_textBox.Text, passwordOnLogin_maskedTextBox.Text, remember_checkBox.Checked);
+            bool loginStatus = user_TABLES.Login(usernameOnLogin_textBox.Text, passwordOnLogin_maskedTextBox.Text, remember_checkBox.Checked);
             if (loginStatus)
-            { /*MainForm will opening here.*/}
+            {
+                /*MainForm will opening here.*/
+                MessageBox.Show(loginStatus.ToString());
+            }
 
             else
                 MessageBox.Show("Username or password is incorrect. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void registerOnRegister_button_Click(object sender, System.EventArgs e)
         {
-
+            bool status = false;
+            if (
+                passwordOnRegister_maskedTextBox.Text.Equals(passwordAgainOnRegister_maskedTextBox.Text)
+                &&
+                emailOnRegister_textBox.Text.Equals(emainAgainOnRegister_textBox.Text)
+                )
+            { status = user_TABLES.Register(usernameOnRegister_textBox.Text, passwordOnRegister_maskedTextBox.Text); }
+            MessageBox.Show(status.ToString());
         }
 
         private void register_button_Click(object sender, System.EventArgs e)

@@ -33,7 +33,14 @@ namespace Muhasebe.ORM
         }
         public bool Update(Table t)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = $"Update_{myVariableType.Name}";
+            cmd.Connection = Tools.Connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            PropertyInfo[] props = myVariableType.GetProperties();
+            foreach (PropertyInfo prop in props)
+                cmd.Parameters.AddWithValue($"@{prop.Name}", prop.GetValue(t));
+            return Tools.ExecuteQuerry(cmd);
         }
         public bool Delete(int id)
         {
