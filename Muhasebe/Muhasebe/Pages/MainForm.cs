@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Muhasebe.Pages
 {
-    public partial class StokTakip : Form
+    public partial class MainForm : Form
     {
-        public StokTakip()
+        public MainForm()
         {
             InitializeComponent();
         }

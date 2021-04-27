@@ -437,6 +437,7 @@ namespace Muhasebe
             this.ClientSize = new System.Drawing.Size(662, 497);
             this.Controls.Add(this.register_panel);
             this.Controls.Add(this.login_panel);
+            this.KeyPreview = true;
             this.Name = "LoginRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

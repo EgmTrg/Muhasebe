@@ -36,8 +36,8 @@ namespace Muhasebe
             bool loginStatus = user_TABLES.Login(usernameOnLogin_textBox.Text, passwordOnLogin_maskedTextBox.Text, remember_checkBox.Checked);
             if (loginStatus)
             {
-                /*MainForm will opening here.*/
-                MessageBox.Show(loginStatus.ToString());
+                new Pages.MainForm().Show();
+                //MessageBox.Show(loginStatus.ToString());
             }
 
             else

@@ -13,7 +13,7 @@ namespace Muhasebe.ORM.Tables
             {
                 for (int i = 0; i <= rows.Length; i++)
                 {
-                    if (rows[i].ItemArray[4].Equals(true))
+                    if (rows[i].ItemArray[1].Equals(name) && rows[i].ItemArray[4].Equals(true))
                         return true;
                     else if (rows[i].ItemArray[1].Equals(name) && rows[i].ItemArray[2].Equals(password))
                     {

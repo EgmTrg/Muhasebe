@@ -55,17 +55,19 @@
     <Compile Include="LoginRegister.Designer.cs">
       <DependentUpon>LoginRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="PageManagement.cs" />
-    <Compile Include="Pages\Stok Takip.cs">
+    <Compile Include="Pages\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Stok Takip.Designer.cs">
-      <DependentUpon>Stok Takip.cs</DependentUpon>
+    <Compile Include="Pages\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginRegister.resx">
       <DependentUpon>LoginRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +100,9 @@
       <Project>{c4e47034-453b-4708-b57f-72f1f01515b6}</Project>
       <Name>Muhasebe.ORM</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\SubForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
