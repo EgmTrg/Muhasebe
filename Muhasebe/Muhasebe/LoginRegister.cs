@@ -36,10 +36,9 @@ namespace Muhasebe
             bool loginStatus = user_TABLES.Login(usernameOnLogin_textBox.Text, passwordOnLogin_maskedTextBox.Text, remember_checkBox.Checked);
             if (loginStatus)
             {
-                new Pages.MainForm().Show();
-                //MessageBox.Show(loginStatus.ToString());
+                new Pages.MainForm(usernameOnLogin_textBox.Text).Show();
+                this.Hide();
             }
-
             else
                 MessageBox.Show("Username or password is incorrect. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

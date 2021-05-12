@@ -14,7 +14,7 @@ namespace Muhasebe.ORM
             SqlDataAdapter adp = new SqlDataAdapter();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = Tools.Connection;
-            cmd.CommandText = $"Select_{myVariableType.Name}";
+            cmd.CommandText = $"{myVariableType.Name}_Select";
             cmd.CommandType = CommandType.StoredProcedure;
             adp.SelectCommand = cmd;
             adp.Fill(dt);
@@ -23,7 +23,7 @@ namespace Muhasebe.ORM
         public bool Insert(Table t)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = $"Insert_{myVariableType.Name}";
+            cmd.CommandText = $"{myVariableType.Name}_Insert";
             cmd.Connection = Tools.Connection;
             cmd.CommandType = CommandType.StoredProcedure;
             PropertyInfo[] props = myVariableType.GetProperties();
@@ -34,7 +34,7 @@ namespace Muhasebe.ORM
         public bool Update(Table t)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = $"Update_{myVariableType.Name}";
+            cmd.CommandText = $"{myVariableType.Name}_Update";
             cmd.Connection = Tools.Connection;
             cmd.CommandType = CommandType.StoredProcedure;
             PropertyInfo[] props = myVariableType.GetProperties();
