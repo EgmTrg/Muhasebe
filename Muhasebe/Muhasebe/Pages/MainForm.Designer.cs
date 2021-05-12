@@ -101,7 +101,7 @@ namespace Muhasebe.Pages
             treeNode3});
             this.menubar_treeView.Size = new System.Drawing.Size(192, 648);
             this.menubar_treeView.TabIndex = 2;
-            this.menubar_treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.menubar_treeView_AfterSelect);
+            this.menubar_treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.menubar_treeView_NodeMouseClick);
             // 
             // main_panel
             // 

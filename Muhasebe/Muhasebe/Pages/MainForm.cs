@@ -7,26 +7,11 @@ namespace Muhasebe.Pages
     {
         private UserControl _CURRENT_PAGE = null;
 
-        public MainForm(string username)
+        public MainForm(string username, Form LR)
         {
             InitializeComponent();
             currentUsername_label.Text = username + "'s Account";
-        }
-
-        private void menubar_treeView_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            if (menubar_treeView.SelectedNode.Tag.ToString() == "ParentNode")
-                return;
-
-            switch (menubar_treeView.SelectedNode.Text)
-            {
-                case "Homepage":
-                    ChangePage(new Homepage());
-                    break;
-                case "List":
-                    ChangePage(new SubPages.Current.List());
-                    break;
-            }
+            FormClosed += (sender, eventArgs) => LR.Close();
         }
 
         #region Custom Methods
@@ -42,5 +27,25 @@ namespace Muhasebe.Pages
             newPage.Show();
         }
         #endregion
+
+        private void menubar_treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node.Tag.ToString() == "ParentNode")
+            {
+                e.Node.Expand();
+                return;
+            }
+
+            switch (e.Node.Text)
+            {
+                case "Homepage":
+                    ChangePage(new Homepage());
+                    break;
+                case "List":
+                    ChangePage(new SubPages.Current.List());
+                    break;
+            }
+            main_panel.Focus();
+        }
     }
 }

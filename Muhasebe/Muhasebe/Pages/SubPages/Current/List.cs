@@ -26,6 +26,5 @@ namespace Muhasebe.Pages.SubPages.Current
         {
             dataGridView1.Rows.Clear();
         }
-
     }
 }
