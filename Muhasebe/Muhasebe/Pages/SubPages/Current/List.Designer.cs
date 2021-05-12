@@ -34,6 +34,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.search_groupBox = new System.Windows.Forms.GroupBox();
+            this.clearFilter_ıconButton = new FontAwesome.Sharp.IconButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -75,6 +76,7 @@ namespace Muhasebe.Pages.SubPages.Current
             // 
             // search_groupBox
             // 
+            this.search_groupBox.Controls.Add(this.clearFilter_ıconButton);
             this.search_groupBox.Controls.Add(this.radioButton5);
             this.search_groupBox.Controls.Add(this.radioButton4);
             this.search_groupBox.Controls.Add(this.radioButton6);
@@ -91,6 +93,26 @@ namespace Muhasebe.Pages.SubPages.Current
             this.search_groupBox.TabStop = false;
             this.search_groupBox.Text = "Search Area";
             // 
+            // clearFilter_ıconButton
+            // 
+            this.clearFilter_ıconButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.clearFilter_ıconButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.clearFilter_ıconButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.clearFilter_ıconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearFilter_ıconButton.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.clearFilter_ıconButton.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.clearFilter_ıconButton.IconColor = System.Drawing.Color.Black;
+            this.clearFilter_ıconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.clearFilter_ıconButton.IconSize = 18;
+            this.clearFilter_ıconButton.Location = new System.Drawing.Point(730, 12);
+            this.clearFilter_ıconButton.Name = "clearFilter_ıconButton";
+            this.clearFilter_ıconButton.Size = new System.Drawing.Size(92, 27);
+            this.clearFilter_ıconButton.TabIndex = 6;
+            this.clearFilter_ıconButton.Text = "Clear Filter";
+            this.clearFilter_ıconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.clearFilter_ıconButton.UseVisualStyleBackColor = true;
+            this.clearFilter_ıconButton.Click += new System.EventHandler(this.clearFilter_ıconButton_Click);
+            // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
@@ -102,6 +124,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "District";
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -114,6 +137,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "City";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
             // radioButton6
             // 
@@ -126,6 +150,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Personal ID";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -138,6 +163,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Group Name";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -150,6 +176,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Current Name";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -162,6 +189,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Current Code";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
             // label2
             // 
@@ -234,5 +262,6 @@ namespace Muhasebe.Pages.SubPages.Current
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton refreshList_iconButton;
+        private FontAwesome.Sharp.IconButton clearFilter_ıconButton;
     }
 }

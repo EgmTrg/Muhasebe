@@ -10,7 +10,6 @@ namespace Muhasebe
         public LoginRegister()
         {
             InitializeComponent();
-
         }
 
         private void Login_Load(object sender, System.EventArgs e)
@@ -37,7 +36,7 @@ namespace Muhasebe
             if (loginStatus)
             {
                 new Pages.MainForm(usernameOnLogin_textBox.Text, this).Show();
-                this.Hide();
+                Hide();
             }
             else
                 MessageBox.Show("Username or password is incorrect. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
