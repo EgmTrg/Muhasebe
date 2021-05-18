@@ -44,7 +44,14 @@ namespace Muhasebe.ORM
         }
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            Table table = Activator.CreateInstance<Table>();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = $"{myVariableType.Name}_Delete";
+            cmd.Connection = Tools.Connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            PropertyInfo prop = myVariableType.GetProperty("PrimaryKey");
+            cmd.Parameters.AddWithValue($"@{prop.GetValue(table)}", id);
+            return Tools.ExecuteQuerry(cmd);
         }
 
     }

@@ -31,7 +31,7 @@ namespace Muhasebe.Pages.SubPages.Current
             ORM.Tables.Current.CurrentList cList = new ORM.Tables.Current.CurrentList();
             string checkedSearchRB = GetCheckedSearchRadioBox();
             if (!checkedSearchRB.Equals("Empty"))
-                cList.SearchFilter(checkedSearchRB).ToString();
+                cList.SearchFilter(checkedSearchRB,searchValue_richTextBox.Text).ToString();
             RefreshDataGrid();
         }
 

@@ -31,19 +31,19 @@ namespace Muhasebe.Pages.SubPages.Current
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.searchValue_richTextBox = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.search_groupBox = new System.Windows.Forms.GroupBox();
             this.clearFilter_ıconButton = new FontAwesome.Sharp.IconButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.refreshList_iconButton = new FontAwesome.Sharp.IconButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.search_groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -61,13 +61,13 @@ namespace Muhasebe.Pages.SubPages.Current
             this.dataGridView1.Size = new System.Drawing.Size(1094, 511);
             this.dataGridView1.TabIndex = 0;
             // 
-            // richTextBox1
+            // searchValue_richTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(157, 50);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(225, 48);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.searchValue_richTextBox.Location = new System.Drawing.Point(157, 50);
+            this.searchValue_richTextBox.Name = "searchValue_richTextBox";
+            this.searchValue_richTextBox.Size = new System.Drawing.Size(185, 48);
+            this.searchValue_richTextBox.TabIndex = 2;
+            this.searchValue_richTextBox.Text = "";
             // 
             // contextMenuStrip1
             // 
@@ -78,14 +78,14 @@ namespace Muhasebe.Pages.SubPages.Current
             // 
             this.search_groupBox.Controls.Add(this.clearFilter_ıconButton);
             this.search_groupBox.Controls.Add(this.radioButton5);
+            this.search_groupBox.Controls.Add(this.radioButton3);
             this.search_groupBox.Controls.Add(this.radioButton4);
             this.search_groupBox.Controls.Add(this.radioButton6);
-            this.search_groupBox.Controls.Add(this.radioButton3);
             this.search_groupBox.Controls.Add(this.radioButton2);
             this.search_groupBox.Controls.Add(this.radioButton1);
             this.search_groupBox.Controls.Add(this.label2);
             this.search_groupBox.Controls.Add(this.label1);
-            this.search_groupBox.Controls.Add(this.richTextBox1);
+            this.search_groupBox.Controls.Add(this.searchValue_richTextBox);
             this.search_groupBox.Location = new System.Drawing.Point(12, 13);
             this.search_groupBox.Name = "search_groupBox";
             this.search_groupBox.Size = new System.Drawing.Size(826, 116);
@@ -104,7 +104,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.clearFilter_ıconButton.IconColor = System.Drawing.Color.Black;
             this.clearFilter_ıconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.clearFilter_ıconButton.IconSize = 18;
-            this.clearFilter_ıconButton.Location = new System.Drawing.Point(730, 12);
+            this.clearFilter_ıconButton.Location = new System.Drawing.Point(488, 18);
             this.clearFilter_ıconButton.Name = "clearFilter_ıconButton";
             this.clearFilter_ıconButton.Size = new System.Drawing.Size(92, 27);
             this.clearFilter_ıconButton.TabIndex = 6;
@@ -117,7 +117,7 @@ namespace Muhasebe.Pages.SubPages.Current
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton5.Location = new System.Drawing.Point(746, 79);
+            this.radioButton5.Location = new System.Drawing.Point(529, 79);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(69, 22);
             this.radioButton5.TabIndex = 5;
@@ -130,12 +130,12 @@ namespace Muhasebe.Pages.SubPages.Current
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton4.Location = new System.Drawing.Point(746, 51);
+            this.radioButton4.Location = new System.Drawing.Point(474, 79);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(49, 22);
+            this.radioButton4.Size = new System.Drawing.Size(53, 22);
             this.radioButton4.TabIndex = 5;
             this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "City";
+            this.radioButton4.Text = "Date";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
@@ -143,7 +143,7 @@ namespace Muhasebe.Pages.SubPages.Current
             // 
             this.radioButton6.AutoSize = true;
             this.radioButton6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton6.Location = new System.Drawing.Point(590, 79);
+            this.radioButton6.Location = new System.Drawing.Point(529, 51);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(90, 22);
             this.radioButton6.TabIndex = 5;
@@ -152,24 +152,11 @@ namespace Muhasebe.Pages.SubPages.Current
             this.radioButton6.UseVisualStyleBackColor = true;
             this.radioButton6.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton3.Location = new System.Drawing.Point(590, 51);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(98, 22);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Group Name";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton2.Location = new System.Drawing.Point(443, 79);
+            this.radioButton2.Location = new System.Drawing.Point(361, 79);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(107, 22);
             this.radioButton2.TabIndex = 5;
@@ -182,7 +169,7 @@ namespace Muhasebe.Pages.SubPages.Current
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton1.Location = new System.Drawing.Point(443, 51);
+            this.radioButton1.Location = new System.Drawing.Point(361, 51);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(103, 22);
             this.radioButton1.TabIndex = 5;
@@ -195,7 +182,7 @@ namespace Muhasebe.Pages.SubPages.Current
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(439, 22);
+            this.label2.Location = new System.Drawing.Point(357, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 22);
             this.label2.TabIndex = 4;
@@ -227,6 +214,19 @@ namespace Muhasebe.Pages.SubPages.Current
             this.refreshList_iconButton.UseVisualStyleBackColor = true;
             this.refreshList_iconButton.Click += new System.EventHandler(this.refreshList_iconButton_Click);
             // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton3.Location = new System.Drawing.Point(474, 51);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(49, 22);
+            this.radioButton3.TabIndex = 5;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "City";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
+            // 
             // List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -250,18 +250,18 @@ namespace Muhasebe.Pages.SubPages.Current
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox searchValue_richTextBox;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.GroupBox search_groupBox;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton refreshList_iconButton;
         private FontAwesome.Sharp.IconButton clearFilter_ıconButton;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }

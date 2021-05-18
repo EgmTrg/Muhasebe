@@ -13,7 +13,7 @@ namespace Muhasebe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginRegister());
+            Application.Run(new Pages.MainForm("Test"));
         }
     }
 }

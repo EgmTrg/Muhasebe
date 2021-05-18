@@ -7,6 +7,12 @@ namespace Muhasebe.Pages
     {
         private UserControl _CURRENT_PAGE = null;
 
+        public MainForm(string username)
+        {
+            InitializeComponent();
+            currentUsername_label.Text = username + "'s Account";
+        }
+
         public MainForm(string username, Form LR)
         {
             InitializeComponent();
