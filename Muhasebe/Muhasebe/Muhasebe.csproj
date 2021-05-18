@@ -70,6 +70,12 @@
     <Compile Include="Pages\SubPages\Current\List.Designer.cs">
       <DependentUpon>List.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SubPages\Current\Transactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\SubPages\Current\Transactions.Designer.cs">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SubPages\Homepage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\SubPages\Current\List.resx">
       <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SubPages\Current\Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\SubPages\Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
