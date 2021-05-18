@@ -132,8 +132,8 @@ namespace Muhasebe.Pages
 
         private System.Windows.Forms.Panel headerSettings_panel;
         private System.Windows.Forms.Button menuBar_HideOrShow_button;
-        private System.Windows.Forms.TreeView menubar_treeView;
         private System.Windows.Forms.Label currentUsername_label;
         private System.Windows.Forms.Panel main_panel;
+        public System.Windows.Forms.TreeView menubar_treeView;
     }
 }

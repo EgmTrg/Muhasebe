@@ -7,21 +7,29 @@ namespace Muhasebe.Pages
     {
         private UserControl _CURRENT_PAGE = null;
 
+        /// <summary>
+        /// Use this feature for ONLY references.
+        /// </summary>
+        public MainForm() 
+        { 
+            InitializeComponent(); 
+        }
+
         public MainForm(string username)
         {
             InitializeComponent();
             currentUsername_label.Text = username + "'s Account";
         }
 
-        public MainForm(string username, Form LR)
+        public MainForm(string username, Form LoginRegister)
         {
             InitializeComponent();
             currentUsername_label.Text = username + "'s Account";
-            FormClosed += (sender, eventArgs) => LR.Close();
+            FormClosed += (sender, eventArgs) => LoginRegister.Close();
         }
 
         #region Custom Methods
-        private void ChangePage(UserControl newPage)
+        public void ChangePage(UserControl newPage)
         {
             if (_CURRENT_PAGE != null)
                 _CURRENT_PAGE.Dispose();
