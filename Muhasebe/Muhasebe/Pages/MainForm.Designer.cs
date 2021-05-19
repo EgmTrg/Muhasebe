@@ -31,8 +31,10 @@ namespace Muhasebe.Pages
         {
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Homepage");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("List");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Current Account", new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Transactions");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Current Account", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode3});
             this.headerSettings_panel = new System.Windows.Forms.Panel();
             this.currentUsername_label = new System.Windows.Forms.Label();
             this.menuBar_HideOrShow_button = new System.Windows.Forms.Button();
@@ -90,15 +92,18 @@ namespace Muhasebe.Pages
             treeNode1.Name = "Node0";
             treeNode1.Tag = "ChildNode";
             treeNode1.Text = "Homepage";
-            treeNode2.Name = "Node3";
+            treeNode2.Name = "Node2";
             treeNode2.Tag = "ChildNode";
             treeNode2.Text = "List";
-            treeNode3.Name = "Node1";
-            treeNode3.Tag = "ParentNode";
-            treeNode3.Text = "Current Account";
+            treeNode3.Name = "Node3";
+            treeNode3.Tag = "ChildNode";
+            treeNode3.Text = "Transactions";
+            treeNode4.Name = "Node1";
+            treeNode4.Tag = "ParentNode";
+            treeNode4.Text = "Current Account";
             this.menubar_treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
-            treeNode3});
+            treeNode4});
             this.menubar_treeView.Size = new System.Drawing.Size(192, 648);
             this.menubar_treeView.TabIndex = 2;
             this.menubar_treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.menubar_treeView_NodeMouseClick);

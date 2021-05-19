@@ -58,6 +58,9 @@ namespace Muhasebe.Pages
                 case "List":
                     ChangePage(new SubPages.Current.List());
                     break;
+                case "Transactions":
+                    ChangePage(new SubPages.Current.Transactions());
+                    break;
             }
             main_panel.Focus();
         }
