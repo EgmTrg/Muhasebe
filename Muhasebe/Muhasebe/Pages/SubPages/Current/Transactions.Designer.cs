@@ -1,7 +1,7 @@
 ﻿
 namespace Muhasebe.Pages.SubPages.Current
 {
-    partial class Transactions_Page
+    partial class Transactions
     {
         /// <summary> 
         /// Required designer variable.

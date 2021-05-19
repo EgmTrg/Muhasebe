@@ -3,16 +3,16 @@ using System.Windows.Forms;
 
 namespace Muhasebe.Pages.SubPages.Current
 {
-    public partial class Transactions_Page : UserControl
+    public partial class Transactions : UserControl
     {
-        public Transactions_Page()
+        public Transactions()
         {
             InitializeComponent();
         }
 
         private void Transactions_Page_Load(object sender, EventArgs e)
         {
-            new ORM.Tables.Current.Transactions().SelectDB();
+            dataGridView1.DataSource = new ORM.Tables.Current.Transactions().SelectDB();
         }
 
         private void Search_ıconButton_Click(object sender, EventArgs e)

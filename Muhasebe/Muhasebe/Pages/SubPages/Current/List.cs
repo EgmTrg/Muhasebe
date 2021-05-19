@@ -19,19 +19,27 @@ namespace Muhasebe.Pages.SubPages.Current
 
         private void RefreshDataGrid()
         {
-            dataGridView1.Rows.Clear();
-            dataGridView1.Columns.Clear();
-            dataGridView1.DataSource = new ORM.Tables.Current.CurrentList().SelectDB();
-            dataGridView1.DataSource = null;
+            try
+            {
+                dataGridView1.Rows.Clear();
+                dataGridView1.Columns.Clear();
+                dataGridView1.DataSource = new ORM.Tables.Current.CurrentList().SelectDB();
+            }
+            catch (System.Exception)
+            {
+                dataGridView1.DataSource = null;
+                RefreshDataGrid();
+            }
         }
 
         private void refreshList_iconButton_Click(object sender, System.EventArgs e)
         {
+            dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
             ORM.Tables.Current.CurrentList cList = new ORM.Tables.Current.CurrentList();
             string checkedSearchRB = GetCheckedSearchRadioBox();
             if (!checkedSearchRB.Equals("Empty"))
-                cList.SearchFilter(checkedSearchRB,searchValue_richTextBox.Text).ToString();
+                cList.SearchFilter(checkedSearchRB, searchValue_richTextBox.Text).ToString();
             RefreshDataGrid();
         }
 
