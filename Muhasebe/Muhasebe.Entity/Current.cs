@@ -8,15 +8,17 @@ namespace Muhasebe.Entity
         public int CurrentID { get; set; }
         public int Code { get; set; }
         public string Title { get; set; }
-        public int Dept { get; set; }
-        public int Payee { get; set; }
+        public double Debt { get; set; }
+        public double Payee { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string District { get; set; }
-        public int Phone1 { get; set; }
-        public int Phone2 { get; set; }
-        public int MobilPhone { get; set; }
+        public long Phone1 { get; set; }
+        public long Phone2 { get; set; }
+        public long MobilPhone { get; set; }
         public string TaxNo { get; set; }
         public int PersonalID { get; set; }
+        public DateTime DateTime { get; set; }
+        public string Explain { get; set; }
     }
 }

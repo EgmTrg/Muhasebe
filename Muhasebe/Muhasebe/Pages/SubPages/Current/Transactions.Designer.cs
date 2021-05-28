@@ -46,7 +46,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1094, 64);
+            this.panel1.Size = new System.Drawing.Size(1094, 61);
             this.panel1.TabIndex = 0;
             // 
             // Search_ıconButton
@@ -116,18 +116,18 @@ namespace Muhasebe.Pages.SubPages.Current
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 64);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1094, 584);
+            this.dataGridView1.Size = new System.Drawing.Size(1094, 587);
             this.dataGridView1.TabIndex = 1;
             // 
-            // Transactions_Page
+            // Transactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "Transactions_Page";
+            this.Name = "Transactions";
             this.Size = new System.Drawing.Size(1094, 648);
             this.Load += new System.EventHandler(this.Transactions_Page_Load);
             this.panel1.ResumeLayout(false);

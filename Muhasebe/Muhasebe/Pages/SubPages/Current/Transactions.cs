@@ -22,14 +22,13 @@ namespace Muhasebe.Pages.SubPages.Current
 
         private void Add_ıconButton_Click(object sender, EventArgs e)
         {
-
+            //new Utility().ChangePage(new AddsAndRemoves.Add_Transactions(), true);
+            new AddsAndRemoves.Transactions_Add().Show();
         }
 
         private void Remove_ıconButton_Click(object sender, EventArgs e)
         {
 
         }
-
-
     }
 }

@@ -10,9 +10,9 @@ namespace Muhasebe.Pages
         /// <summary>
         /// Use this feature for ONLY references.
         /// </summary>
-        public MainForm() 
-        { 
-            InitializeComponent(); 
+        public MainForm()
+        {
+            InitializeComponent();
         }
 
         public MainForm(string username)
@@ -28,10 +28,9 @@ namespace Muhasebe.Pages
             FormClosed += (sender, eventArgs) => LoginRegister.Close();
         }
 
-        #region Custom Methods
-        public void ChangePage(UserControl newPage)
+        public virtual void ChangePage(UserControl newPage, bool FromNode)
         {
-            if (_CURRENT_PAGE != null)
+            if (_CURRENT_PAGE != null || FromNode)
                 _CURRENT_PAGE.Dispose();
 
             _CURRENT_PAGE = newPage;
@@ -40,7 +39,6 @@ namespace Muhasebe.Pages
             newPage.BringToFront();
             newPage.Show();
         }
-        #endregion
 
         private void menubar_treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -49,20 +47,20 @@ namespace Muhasebe.Pages
                 e.Node.Expand();
                 return;
             }
-
             switch (e.Node.Text)
             {
                 case "Homepage":
-                    ChangePage(new Homepage());
+                    ChangePage(new Homepage(), false);
                     break;
                 case "List":
-                    ChangePage(new SubPages.Current.List());
+                    ChangePage(new SubPages.Current.List(),false);
                     break;
                 case "Transactions":
-                    ChangePage(new SubPages.Current.Transactions());
+                    ChangePage(new SubPages.Current.Transactions(),false);
                     break;
             }
             main_panel.Focus();
         }
+        // fromnode parametresi eklendi. degisiklikler uygulandi ekstra if parametresi eklendi
     }
 }
