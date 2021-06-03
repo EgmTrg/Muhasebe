@@ -29,13 +29,13 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void autoFill_button_Click(object sender, System.EventArgs e)
+        private void autoFill_button_Click(object sender, EventArgs e)
         {
             DialogResult autofill = MessageBox.Show("Are you sure? This selection can not change again.", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (autofill == DialogResult.Yes)
             {
                 code_numericUpDown.Enabled = false;
-                code_numericUpDown.Value = LastCurrentCode();
+                code_numericUpDown.Value = new ORM.Tables.Current.Transactions().CurrentCode();
             }
         }
 
@@ -50,27 +50,15 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
         }
         #endregion
 
-        private int LastCurrentCode()
+        private void Add_ıconButton_Click(object sender, EventArgs e)
         {
-            DataRow[] SQLCodeRows = new ORM.Tables.Current.CurrentList().SelectDB().Select();
-            return SQLCodeRows.Length + 1;
-        }
-
-        private void Add_ıconButton_Click(object sender, System.EventArgs e)
-        {
-            bool autofill = code_numericUpDown.Enabled;
             string[] contact = { address_textBox.Text, city_textBox.Text, disctict_textBox.Text, phone1_textBox.Text, phone2_textBox.Text, mobilPhone_textBox.Text };
-            double[] financial = { System.Convert.ToDouble(debt_textBox.Text), System.Convert.ToDouble(payee_textBox.Text) };
+            double[] financial = { Convert.ToDouble(debt_textBox.Text), Convert.ToDouble(payee_textBox.Text) };
             string[] details = { taxNo_textBox.Text, personalID_textBox.Text, explain_richTextBox.Text };
 
             Entity.Current newCurrent = new Entity.Current();
 
-            // this will be usable to future
-            /*if (autofill)
-                newCurrent.Code = Convert.ToInt32(code_numericUpDown.Value);
-            else*/
-
-            newCurrent.Code = LastCurrentCode();
+            newCurrent.Code = Convert.ToInt32(code_numericUpDown.Value);
 
             newCurrent.Title = title_textBox.Text;
 
@@ -80,12 +68,12 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             newCurrent.Address = contact[0];
             newCurrent.City = contact[1];
             newCurrent.District = contact[2];
-            newCurrent.Phone1 = System.Convert.ToInt64(contact[3]);
-            newCurrent.Phone2 = System.Convert.ToInt64(contact[4]);
-            newCurrent.MobilPhone = System.Convert.ToInt64(contact[5]);
+            newCurrent.Phone1 = Convert.ToInt64(contact[3]);
+            newCurrent.Phone2 = Convert.ToInt64(contact[4]);
+            newCurrent.MobilPhone = Convert.ToInt64(contact[5]);
 
             newCurrent.TaxNo = details[0];
-            newCurrent.PersonalID = System.Convert.ToInt32(details[1]);
+            newCurrent.PersonalID = Convert.ToInt32(details[1]);
 
             newCurrent.DateTime = dateTimePicker.Value;
             newCurrent.Explain = details[2];
@@ -93,6 +81,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             new ORM.Tables.Current.Transactions().Insert(newCurrent);
         }
 
-        
+
     }
 }
