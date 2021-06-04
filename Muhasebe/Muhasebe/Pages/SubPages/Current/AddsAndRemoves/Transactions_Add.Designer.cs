@@ -457,6 +457,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.code_numericUpDown.Size = new System.Drawing.Size(135, 26);
             this.code_numericUpDown.TabIndex = 2;
             this.code_numericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.code_numericUpDown.ValueChanged += new System.EventHandler(this.code_numericUpDown_ValueChanged);
             // 
             // title_textBox
             // 
