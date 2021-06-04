@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,6 +6,8 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
 {
     public partial class Transactions_Add : Form
     {
+        ORM.Tables.Current.Transactions ORMTransactionsPage = new ORM.Tables.Current.Transactions();
+
         public Transactions_Add()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             if (autofill == DialogResult.Yes)
             {
                 code_numericUpDown.Enabled = false;
-                code_numericUpDown.Value = new ORM.Tables.Current.Transactions().CurrentCode();
+                code_numericUpDown.Value = ORMTransactionsPage.CreateCurrentCode();
             }
         }
 
@@ -78,9 +79,12 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             newCurrent.DateTime = dateTimePicker.Value;
             newCurrent.Explain = details[2];
 
-            new ORM.Tables.Current.Transactions().Insert(newCurrent);
+            ORMTransactionsPage.Insert(newCurrent);
         }
 
-
+        private void code_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            ORMTransactionsPage.CurrentCodeControl((int)code_numericUpDown.Value);
+        }
     }
 }
