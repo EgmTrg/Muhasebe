@@ -112,6 +112,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.ClearAll_ıconButton.Text = "All Clear";
             this.ClearAll_ıconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ClearAll_ıconButton.UseVisualStyleBackColor = false;
+            this.ClearAll_ıconButton.Click += new System.EventHandler(this.ClearAll_ıconButton_Click);
             // 
             // Add_ıconButton
             // 

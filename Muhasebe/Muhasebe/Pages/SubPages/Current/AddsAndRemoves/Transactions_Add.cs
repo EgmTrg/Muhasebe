@@ -84,7 +84,27 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
 
         private void code_numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            ORMTransactionsPage.CurrentCodeControl((int)code_numericUpDown.Value);
+            if (ORMTransactionsPage.CurrentCodeControl((int)code_numericUpDown.Value))
+            {
+                DialogResult dialog = MessageBox.Show($"This code ({code_numericUpDown.Value}) already used. Do you want to generate a new code?", "Already have.", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (dialog == DialogResult.Yes)
+                    autoFill_button.PerformClick();
+            }
+        }
+
+        private void ClearAll_ıconButton_Click(object sender, EventArgs e)
+        {
+            address_textBox.Text = string.Empty;
+            city_textBox.Text = string.Empty;
+            disctict_textBox.Text = string.Empty;
+            phone1_textBox.Text = string.Empty;
+            phone2_textBox.Text = string.Empty;
+            mobilPhone_textBox.Text = string.Empty;
+            debt_textBox.Text = string.Empty; 
+            payee_textBox.Text = string.Empty;
+            taxNo_textBox.Text = string.Empty;
+            personalID_textBox.Text = string.Empty; 
+            explain_richTextBox.Text = string.Empty;
         }
     }
 }
