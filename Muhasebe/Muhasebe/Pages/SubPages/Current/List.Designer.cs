@@ -36,6 +36,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.search_groupBox = new System.Windows.Forms.GroupBox();
             this.clearFilter_ıconButton = new FontAwesome.Sharp.IconButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -43,7 +44,6 @@ namespace Muhasebe.Pages.SubPages.Current
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.refreshList_iconButton = new FontAwesome.Sharp.IconButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.search_groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -125,6 +125,19 @@ namespace Muhasebe.Pages.SubPages.Current
             this.radioButton5.Text = "District";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton3.Location = new System.Drawing.Point(474, 51);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(49, 22);
+            this.radioButton3.TabIndex = 5;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "City";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -213,19 +226,6 @@ namespace Muhasebe.Pages.SubPages.Current
             this.refreshList_iconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.refreshList_iconButton.UseVisualStyleBackColor = true;
             this.refreshList_iconButton.Click += new System.EventHandler(this.refreshList_iconButton_Click);
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton3.Location = new System.Drawing.Point(474, 51);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(49, 22);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "City";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.SearchButtons_CheckedChanged);
             // 
             // List
             // 

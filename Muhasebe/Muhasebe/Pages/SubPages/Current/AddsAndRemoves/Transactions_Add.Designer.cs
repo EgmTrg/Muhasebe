@@ -64,6 +64,8 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.label3 = new System.Windows.Forms.Label();
             this.code_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.title_textBox = new System.Windows.Forms.TextBox();
+            this.Debt_INT_VALUE_Label = new System.Windows.Forms.Label();
+            this.payee_INT_VALUE_Label = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -150,7 +152,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.explain_richTextBox.Name = "explain_richTextBox";
             this.explain_richTextBox.Size = new System.Drawing.Size(480, 244);
             this.explain_richTextBox.TabIndex = 3;
-            this.explain_richTextBox.Text = "";
+            this.explain_richTextBox.Text = "Test2";
             // 
             // taxNo_textBox
             // 
@@ -159,6 +161,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.taxNo_textBox.Name = "taxNo_textBox";
             this.taxNo_textBox.Size = new System.Drawing.Size(220, 26);
             this.taxNo_textBox.TabIndex = 1;
+            this.taxNo_textBox.Text = "Test2";
             // 
             // label12
             // 
@@ -177,6 +180,8 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.personalID_textBox.Name = "personalID_textBox";
             this.personalID_textBox.Size = new System.Drawing.Size(220, 26);
             this.personalID_textBox.TabIndex = 1;
+            this.personalID_textBox.Text = "123";
+            this.personalID_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             // 
             // label14
             // 
@@ -289,6 +294,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.city_textBox.Name = "city_textBox";
             this.city_textBox.Size = new System.Drawing.Size(220, 26);
             this.city_textBox.TabIndex = 1;
+            this.city_textBox.Text = "Test2";
             // 
             // disctict_textBox
             // 
@@ -297,6 +303,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.disctict_textBox.Name = "disctict_textBox";
             this.disctict_textBox.Size = new System.Drawing.Size(220, 26);
             this.disctict_textBox.TabIndex = 1;
+            this.disctict_textBox.Text = "Test2";
             // 
             // address_textBox
             // 
@@ -305,6 +312,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.address_textBox.Name = "address_textBox";
             this.address_textBox.Size = new System.Drawing.Size(220, 26);
             this.address_textBox.TabIndex = 1;
+            this.address_textBox.Text = "Test2";
             // 
             // label10
             // 
@@ -323,6 +331,8 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.mobilPhone_textBox.Name = "mobilPhone_textBox";
             this.mobilPhone_textBox.Size = new System.Drawing.Size(220, 26);
             this.mobilPhone_textBox.TabIndex = 1;
+            this.mobilPhone_textBox.Text = "123";
+            this.mobilPhone_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             // 
             // phone2_textBox
             // 
@@ -331,6 +341,8 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.phone2_textBox.Name = "phone2_textBox";
             this.phone2_textBox.Size = new System.Drawing.Size(220, 26);
             this.phone2_textBox.TabIndex = 1;
+            this.phone2_textBox.Text = "123";
+            this.phone2_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             // 
             // phone1_textBox
             // 
@@ -339,9 +351,13 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.phone1_textBox.Name = "phone1_textBox";
             this.phone1_textBox.Size = new System.Drawing.Size(220, 26);
             this.phone1_textBox.TabIndex = 1;
+            this.phone1_textBox.Text = "123";
+            this.phone1_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.payee_INT_VALUE_Label);
+            this.groupBox2.Controls.Add(this.Debt_INT_VALUE_Label);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.payee_textBox);
@@ -383,8 +399,10 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.payee_textBox.Name = "payee_textBox";
             this.payee_textBox.Size = new System.Drawing.Size(220, 26);
             this.payee_textBox.TabIndex = 1;
-            this.payee_textBox.TextChanged += new System.EventHandler(this.payee_textBox_TextChanged);
+            this.payee_textBox.Text = "421";
+            this.payee_textBox.Enter += new System.EventHandler(this.debt_textBox_Enter);
             this.payee_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
+            this.payee_textBox.Leave += new System.EventHandler(this.payee_textBox_Leave);
             // 
             // debt_textBox
             // 
@@ -393,8 +411,10 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.debt_textBox.Name = "debt_textBox";
             this.debt_textBox.Size = new System.Drawing.Size(220, 26);
             this.debt_textBox.TabIndex = 1;
-            this.debt_textBox.TextChanged += new System.EventHandler(this.debt_textBox_TextChanged);
+            this.debt_textBox.Text = "421";
+            this.debt_textBox.Enter += new System.EventHandler(this.debt_textBox_Enter);
             this.debt_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
+            this.debt_textBox.Leave += new System.EventHandler(this.debt_textBox_Leave);
             // 
             // groupBox1
             // 
@@ -458,6 +478,11 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.code_numericUpDown.Size = new System.Drawing.Size(135, 26);
             this.code_numericUpDown.TabIndex = 2;
             this.code_numericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.code_numericUpDown.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.code_numericUpDown.ValueChanged += new System.EventHandler(this.code_numericUpDown_ValueChanged);
             // 
             // title_textBox
@@ -467,6 +492,27 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.title_textBox.Name = "title_textBox";
             this.title_textBox.Size = new System.Drawing.Size(220, 26);
             this.title_textBox.TabIndex = 1;
+            this.title_textBox.Text = "Test2";
+            // 
+            // Debt_INT_VALUE_Label
+            // 
+            this.Debt_INT_VALUE_Label.AutoSize = true;
+            this.Debt_INT_VALUE_Label.Location = new System.Drawing.Point(161, 19);
+            this.Debt_INT_VALUE_Label.Name = "Debt_INT_VALUE_Label";
+            this.Debt_INT_VALUE_Label.Size = new System.Drawing.Size(126, 22);
+            this.Debt_INT_VALUE_Label.TabIndex = 2;
+            this.Debt_INT_VALUE_Label.Text = "Debt_INT_VALUE";
+            this.Debt_INT_VALUE_Label.Visible = false;
+            // 
+            // payee_INT_VALUE_Label
+            // 
+            this.payee_INT_VALUE_Label.AutoSize = true;
+            this.payee_INT_VALUE_Label.Location = new System.Drawing.Point(161, 72);
+            this.payee_INT_VALUE_Label.Name = "payee_INT_VALUE_Label";
+            this.payee_INT_VALUE_Label.Size = new System.Drawing.Size(135, 22);
+            this.payee_INT_VALUE_Label.TabIndex = 2;
+            this.payee_INT_VALUE_Label.Text = "payee_INT_VALUE";
+            this.payee_INT_VALUE_Label.Visible = false;
             // 
             // Transactions_Add
             // 
@@ -531,5 +577,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown code_numericUpDown;
         private System.Windows.Forms.TextBox title_textBox;
+        private System.Windows.Forms.Label payee_INT_VALUE_Label;
+        private System.Windows.Forms.Label Debt_INT_VALUE_Label;
     }
 }

@@ -19,7 +19,7 @@ namespace Muhasebe.ORM.Tables.Current
                     return k;
             return -1;
         }
-        /// <summary>
+            /// <summary>
         /// If return true, Database have this code number. Else it is usable code.
         /// </summary>
         /// <param name="code"></param>

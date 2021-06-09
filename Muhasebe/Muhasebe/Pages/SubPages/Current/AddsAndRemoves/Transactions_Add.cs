@@ -40,46 +40,59 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             }
         }
 
-        private void debt_textBox_TextChanged(object sender, EventArgs e)
+        private void debt_textBox_Leave(object sender, EventArgs e)
         {
-            debt_textBox.Text = double.Parse(debt_textBox.Text).ToString("C2");
+            Debt_INT_VALUE_Label.Text = debt_textBox.Text;
+            try
+            {
+                debt_textBox.Text = double.Parse(debt_textBox.Text).ToString("C2");
+            }
+            catch (Exception)
+            {
+                debt_textBox.Text = string.Empty;
+            }
         }
 
-        private void payee_textBox_TextChanged(object sender, EventArgs e)
+        private void payee_textBox_Leave(object sender, EventArgs e)
         {
-            payee_textBox.Text = double.Parse(payee_textBox.Text).ToString("C2");
+            payee_INT_VALUE_Label.Text = payee_textBox.Text;
+            try
+            {
+                payee_textBox.Text = double.Parse(payee_textBox.Text).ToString("C2");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please write only numeric and dont copy paste.");
+                debt_textBox.Text = string.Empty;
+            }
         }
         #endregion
 
         private void Add_ıconButton_Click(object sender, EventArgs e)
         {
-            string[] contact = { address_textBox.Text, city_textBox.Text, disctict_textBox.Text, phone1_textBox.Text, phone2_textBox.Text, mobilPhone_textBox.Text };
-            double[] financial = { Convert.ToDouble(debt_textBox.Text), Convert.ToDouble(payee_textBox.Text) };
-            string[] details = { taxNo_textBox.Text, personalID_textBox.Text, explain_richTextBox.Text };
-
             Entity.Current newCurrent = new Entity.Current();
 
             newCurrent.Code = Convert.ToInt32(code_numericUpDown.Value);
 
             newCurrent.Title = title_textBox.Text;
 
-            newCurrent.Debt = financial[0];
-            newCurrent.Payee = financial[1];
+            newCurrent.Debt = Convert.ToDouble(Debt_INT_VALUE_Label.Text);
+            newCurrent.Payee = Convert.ToDouble(payee_INT_VALUE_Label.Text);
 
-            newCurrent.Address = contact[0];
-            newCurrent.City = contact[1];
-            newCurrent.District = contact[2];
-            newCurrent.Phone1 = Convert.ToInt64(contact[3]);
-            newCurrent.Phone2 = Convert.ToInt64(contact[4]);
-            newCurrent.MobilPhone = Convert.ToInt64(contact[5]);
+            newCurrent.Address = address_textBox.Text;
+            newCurrent.City = city_textBox.Text;
+            newCurrent.District = disctict_textBox.Text;
+            newCurrent.Phone1 = Convert.ToInt64(phone1_textBox.Text);
+            newCurrent.Phone2 = Convert.ToInt64(phone2_textBox.Text);
+            newCurrent.MobilPhone = Convert.ToInt64(mobilPhone_textBox.Text);
 
-            newCurrent.TaxNo = details[0];
-            newCurrent.PersonalID = Convert.ToInt32(details[1]);
+            newCurrent.TaxNo = taxNo_textBox.Text;
+            newCurrent.PersonalID = Convert.ToInt32(personalID_textBox.Text);
 
-            newCurrent.DateTime = dateTimePicker.Value;
-            newCurrent.Explain = details[2];
+            newCurrent.DateTime = dateTimePicker.Value.Date;
+            newCurrent.Explain = explain_richTextBox.Text;
 
-            ORMTransactionsPage.Insert(newCurrent);
+            MessageBox.Show(ORMTransactionsPage.Insert(newCurrent).ToString()); 
         }
 
         private void code_numericUpDown_ValueChanged(object sender, EventArgs e)
@@ -94,17 +107,24 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
 
         private void ClearAll_ıconButton_Click(object sender, EventArgs e)
         {
+            code_numericUpDown.Value = 0;
+            title_textBox.Text = string.Empty;
             address_textBox.Text = string.Empty;
             city_textBox.Text = string.Empty;
             disctict_textBox.Text = string.Empty;
             phone1_textBox.Text = string.Empty;
             phone2_textBox.Text = string.Empty;
             mobilPhone_textBox.Text = string.Empty;
-            debt_textBox.Text = string.Empty; 
+            debt_textBox.Text = string.Empty;
             payee_textBox.Text = string.Empty;
             taxNo_textBox.Text = string.Empty;
-            personalID_textBox.Text = string.Empty; 
+            personalID_textBox.Text = string.Empty;
             explain_richTextBox.Text = string.Empty;
+        }
+
+        private void debt_textBox_Enter(object sender, EventArgs e)
+        {
+            (sender as TextBox).Text = string.Empty;
         }
     }
 }

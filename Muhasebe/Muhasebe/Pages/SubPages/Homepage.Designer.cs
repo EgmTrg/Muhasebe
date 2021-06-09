@@ -106,6 +106,7 @@ namespace Muhasebe.Pages.SubPages
             this.add_CurrentAccount_ıconButton.Text = "Add Current Account";
             this.add_CurrentAccount_ıconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.add_CurrentAccount_ıconButton.UseVisualStyleBackColor = false;
+            this.add_CurrentAccount_ıconButton.Click += new System.EventHandler(this.add_CurrentAccount_ıconButton_Click);
             // 
             // add_Dept_ıconButton
             // 
@@ -721,7 +722,6 @@ namespace Muhasebe.Pages.SubPages
             this.Controls.Add(this.panel2);
             this.Name = "Homepage";
             this.Size = new System.Drawing.Size(1094, 648);
-            this.Load += new System.EventHandler(this.Homepage_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.Daily_groupBox.ResumeLayout(false);
             this.Daily_groupBox.PerformLayout();

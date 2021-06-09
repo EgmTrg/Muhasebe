@@ -34,9 +34,9 @@ namespace Muhasebe.Pages.SubPages
             gfx.DrawLine(p, e.ClipRectangle.Width - 2, e.ClipRectangle.Height - 2, 0, e.ClipRectangle.Height - 2); // BOTTOM LINE
         }
 
-        private void Homepage_Load(object sender, System.EventArgs e)
+        private void add_CurrentAccount_ıconButton_Click(object sender, System.EventArgs e)
         {
-
+            new Current.AddsAndRemoves.Transactions_Add().Show();
         }
     }
 }
