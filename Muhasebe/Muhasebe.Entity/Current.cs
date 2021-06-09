@@ -4,7 +4,7 @@ namespace Muhasebe.Entity
 {
     public class Current : TableObjects
     {
-        public override string PrimaryKey => throw new NotImplementedException();
+        public override string PrimaryKey => "CurrentID";
         public int CurrentID { get; set; }
         public int Code { get; set; }
         public string Title { get; set; }
