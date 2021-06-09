@@ -28,9 +28,9 @@ namespace Muhasebe.Pages
             FormClosed += (sender, eventArgs) => LoginRegister.Close();
         }
 
-        public virtual void ChangePage(UserControl newPage, bool FromNode)
+        public virtual void ChangePage(UserControl newPage)
         {
-            if (_CURRENT_PAGE != null || FromNode)
+            if (_CURRENT_PAGE != null)
                 _CURRENT_PAGE.Dispose();
 
             _CURRENT_PAGE = newPage;
@@ -47,16 +47,19 @@ namespace Muhasebe.Pages
                 e.Node.Expand();
                 return;
             }
-            switch (e.Node.Text)
+            switch (e.Node.ToolTipText)
             {
                 case "Homepage":
-                    ChangePage(new Homepage(), false);
+                    ChangePage(new Homepage());
                     break;
-                case "List":
-                    ChangePage(new SubPages.Current.List(),false);
+                case "Current_List":
+                    ChangePage(new SubPages.Current.List());
                     break;
-                case "Transactions":
-                    ChangePage(new SubPages.Current.Transactions(),false);
+                case "Current_Transactions":
+                    ChangePage(new SubPages.Current.Transactions());
+                    break;
+                case "Stock_List":
+                    ChangePage(new SubPages.Stock.StockList());
                     break;
             }
             main_panel.Focus();
