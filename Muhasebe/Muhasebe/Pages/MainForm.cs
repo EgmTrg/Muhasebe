@@ -44,7 +44,10 @@ namespace Muhasebe.Pages
         {
             if (e.Node.Tag.ToString() == "ParentNode")
             {
-                e.Node.Expand();
+                if (e.Node.IsExpanded)
+                    e.Node.Collapse();
+                else
+                    e.Node.Expand();
                 return;
             }
             switch (e.Node.ToolTipText)

@@ -15,6 +15,7 @@ namespace Muhasebe.Pages.SubPages.Stock
         public StockList()
         {
             InitializeComponent();
+            radioButton1.Checked = true;
         }
     }
 }
