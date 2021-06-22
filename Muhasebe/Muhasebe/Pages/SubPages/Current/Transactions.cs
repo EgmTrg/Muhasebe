@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Muhasebe.Pages.SubPages.Current
 {
     public partial class Transactions : UserControl
     {
+        private bool editmode { get; set; }
+
         public Transactions()
         {
             InitializeComponent();
@@ -22,13 +25,26 @@ namespace Muhasebe.Pages.SubPages.Current
 
         private void Add_ıconButton_Click(object sender, EventArgs e)
         {
-            //new Utility().ChangePage(new AddsAndRemoves.Add_Transactions(), true);
+
             new AddsAndRemoves.Transactions_Add().Show();
         }
 
-        private void Remove_ıconButton_Click(object sender, EventArgs e)
+        private void edit_checkBox_CheckedChanged(object sender, EventArgs e)
         {
-
+            CheckBox cbox = (sender as CheckBox);
+            if (editmode)
+            {
+                cbox.Text = "Edit Mode: DISABLE";
+                cbox.BackColor = Color.FromArgb(231, 111, 81);
+                editmode = false;
+            }
+            else
+            {
+                cbox.Text = "Edit Mode: ENABLE";
+                cbox.BackColor = Color.FromArgb(0,255,0);
+                editmode = true;
+            }
+            MessageBox.Show(editmode.ToString());
         }
     }
 }
