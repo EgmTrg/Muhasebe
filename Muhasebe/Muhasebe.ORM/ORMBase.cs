@@ -23,8 +23,8 @@ namespace Muhasebe.ORM
         public bool Insert(Table t)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = $"{myVariableType.Name}_Insert";
             cmd.Connection = Tools.Connection;
+            cmd.CommandText = $"{myVariableType.Name}_Insert";
             cmd.CommandType = CommandType.StoredProcedure;
             PropertyInfo[] props = myVariableType.GetProperties();
             foreach (var prop in props)
