@@ -54,6 +54,8 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.phone2_textBox = new System.Windows.Forms.TextBox();
             this.phone1_textBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.payee_INT_VALUE_Label = new System.Windows.Forms.Label();
+            this.Debt_INT_VALUE_Label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.payee_textBox = new System.Windows.Forms.TextBox();
@@ -64,8 +66,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.label3 = new System.Windows.Forms.Label();
             this.code_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.title_textBox = new System.Windows.Forms.TextBox();
-            this.Debt_INT_VALUE_Label = new System.Windows.Forms.Label();
-            this.payee_INT_VALUE_Label = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -372,6 +372,26 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.groupBox2.Text = "Financial";
             this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupBoxLines_Paint);
             // 
+            // payee_INT_VALUE_Label
+            // 
+            this.payee_INT_VALUE_Label.AutoSize = true;
+            this.payee_INT_VALUE_Label.Location = new System.Drawing.Point(161, 72);
+            this.payee_INT_VALUE_Label.Name = "payee_INT_VALUE_Label";
+            this.payee_INT_VALUE_Label.Size = new System.Drawing.Size(135, 22);
+            this.payee_INT_VALUE_Label.TabIndex = 2;
+            this.payee_INT_VALUE_Label.Text = "payee_INT_VALUE";
+            this.payee_INT_VALUE_Label.Visible = false;
+            // 
+            // Debt_INT_VALUE_Label
+            // 
+            this.Debt_INT_VALUE_Label.AutoSize = true;
+            this.Debt_INT_VALUE_Label.Location = new System.Drawing.Point(161, 19);
+            this.Debt_INT_VALUE_Label.Name = "Debt_INT_VALUE_Label";
+            this.Debt_INT_VALUE_Label.Size = new System.Drawing.Size(126, 22);
+            this.Debt_INT_VALUE_Label.TabIndex = 2;
+            this.Debt_INT_VALUE_Label.Text = "Debt_INT_VALUE";
+            this.Debt_INT_VALUE_Label.Visible = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -475,7 +495,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             0,
             0});
             this.code_numericUpDown.Name = "code_numericUpDown";
-            this.code_numericUpDown.Size = new System.Drawing.Size(135, 26);
+            this.code_numericUpDown.Size = new System.Drawing.Size(220, 26);
             this.code_numericUpDown.TabIndex = 2;
             this.code_numericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.code_numericUpDown.Value = new decimal(new int[] {
@@ -493,26 +513,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.title_textBox.Size = new System.Drawing.Size(220, 26);
             this.title_textBox.TabIndex = 1;
             this.title_textBox.Text = "Test2";
-            // 
-            // Debt_INT_VALUE_Label
-            // 
-            this.Debt_INT_VALUE_Label.AutoSize = true;
-            this.Debt_INT_VALUE_Label.Location = new System.Drawing.Point(161, 19);
-            this.Debt_INT_VALUE_Label.Name = "Debt_INT_VALUE_Label";
-            this.Debt_INT_VALUE_Label.Size = new System.Drawing.Size(126, 22);
-            this.Debt_INT_VALUE_Label.TabIndex = 2;
-            this.Debt_INT_VALUE_Label.Text = "Debt_INT_VALUE";
-            this.Debt_INT_VALUE_Label.Visible = false;
-            // 
-            // payee_INT_VALUE_Label
-            // 
-            this.payee_INT_VALUE_Label.AutoSize = true;
-            this.payee_INT_VALUE_Label.Location = new System.Drawing.Point(161, 72);
-            this.payee_INT_VALUE_Label.Name = "payee_INT_VALUE_Label";
-            this.payee_INT_VALUE_Label.Size = new System.Drawing.Size(135, 22);
-            this.payee_INT_VALUE_Label.TabIndex = 2;
-            this.payee_INT_VALUE_Label.Text = "payee_INT_VALUE";
-            this.payee_INT_VALUE_Label.Visible = false;
             // 
             // Transactions_Add
             // 

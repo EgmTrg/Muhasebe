@@ -11,6 +11,8 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
         public Transactions_Add()
         {
             InitializeComponent();
+            autoFill_button.PerformClick();
+            autoFill_button.Visible = false;
         }
         #region Events
         private void GroupBoxLines_Paint(object sender, PaintEventArgs e)
