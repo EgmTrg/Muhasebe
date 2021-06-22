@@ -28,6 +28,11 @@ namespace Muhasebe.Pages
             FormClosed += (sender, eventArgs) => LoginRegister.Close();
         }
 
+        private void MainForm_Load(object sender, System.EventArgs e)
+        {
+            ChangePage(new Homepage());
+        }
+
         public virtual void ChangePage(UserControl newPage)
         {
             if (_CURRENT_PAGE != null)
@@ -67,6 +72,8 @@ namespace Muhasebe.Pages
             }
             main_panel.Focus();
         }
+
+
         // fromnode parametresi eklendi. degisiklikler uygulandi ekstra if parametresi eklendi
     }
 }
