@@ -85,7 +85,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(484, 69);
+            this.groupBox4.Location = new System.Drawing.Point(458, 48);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -161,7 +161,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.taxNo_textBox.Name = "taxNo_textBox";
             this.taxNo_textBox.Size = new System.Drawing.Size(220, 26);
             this.taxNo_textBox.TabIndex = 1;
-            this.taxNo_textBox.Text = "Test2";
             // 
             // label12
             // 
@@ -180,7 +179,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.personalID_textBox.Name = "personalID_textBox";
             this.personalID_textBox.Size = new System.Drawing.Size(220, 26);
             this.personalID_textBox.TabIndex = 1;
-            this.personalID_textBox.Text = "123";
             this.personalID_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             // 
             // label14
@@ -227,7 +225,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.groupBox3.Controls.Add(this.mobilPhone_textBox);
             this.groupBox3.Controls.Add(this.phone2_textBox);
             this.groupBox3.Controls.Add(this.phone1_textBox);
-            this.groupBox3.Location = new System.Drawing.Point(42, 334);
+            this.groupBox3.Location = new System.Drawing.Point(23, 315);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -294,7 +292,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.city_textBox.Name = "city_textBox";
             this.city_textBox.Size = new System.Drawing.Size(220, 26);
             this.city_textBox.TabIndex = 1;
-            this.city_textBox.Text = "Test2";
             // 
             // disctict_textBox
             // 
@@ -303,7 +300,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.disctict_textBox.Name = "disctict_textBox";
             this.disctict_textBox.Size = new System.Drawing.Size(220, 26);
             this.disctict_textBox.TabIndex = 1;
-            this.disctict_textBox.Text = "Test2";
             // 
             // address_textBox
             // 
@@ -312,7 +308,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.address_textBox.Name = "address_textBox";
             this.address_textBox.Size = new System.Drawing.Size(220, 26);
             this.address_textBox.TabIndex = 1;
-            this.address_textBox.Text = "Test2";
             // 
             // label10
             // 
@@ -331,7 +326,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.mobilPhone_textBox.Name = "mobilPhone_textBox";
             this.mobilPhone_textBox.Size = new System.Drawing.Size(220, 26);
             this.mobilPhone_textBox.TabIndex = 1;
-            this.mobilPhone_textBox.Text = "123";
             this.mobilPhone_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             // 
             // phone2_textBox
@@ -341,7 +335,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.phone2_textBox.Name = "phone2_textBox";
             this.phone2_textBox.Size = new System.Drawing.Size(220, 26);
             this.phone2_textBox.TabIndex = 1;
-            this.phone2_textBox.Text = "123";
             this.phone2_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             // 
             // phone1_textBox
@@ -351,7 +344,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.phone1_textBox.Name = "phone1_textBox";
             this.phone1_textBox.Size = new System.Drawing.Size(220, 26);
             this.phone1_textBox.TabIndex = 1;
-            this.phone1_textBox.Text = "123";
             this.phone1_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             // 
             // groupBox2
@@ -362,7 +354,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.payee_textBox);
             this.groupBox2.Controls.Add(this.debt_textBox);
-            this.groupBox2.Location = new System.Drawing.Point(42, 176);
+            this.groupBox2.Location = new System.Drawing.Point(23, 157);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -419,7 +411,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.payee_textBox.Name = "payee_textBox";
             this.payee_textBox.Size = new System.Drawing.Size(220, 26);
             this.payee_textBox.TabIndex = 1;
-            this.payee_textBox.Text = "421";
             this.payee_textBox.Enter += new System.EventHandler(this.debt_textBox_Enter);
             this.payee_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             this.payee_textBox.Leave += new System.EventHandler(this.payee_textBox_Leave);
@@ -431,7 +422,6 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.debt_textBox.Name = "debt_textBox";
             this.debt_textBox.Size = new System.Drawing.Size(220, 26);
             this.debt_textBox.TabIndex = 1;
-            this.debt_textBox.Text = "421";
             this.debt_textBox.Enter += new System.EventHandler(this.debt_textBox_Enter);
             this.debt_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumaricAcceptable_Keypress);
             this.debt_textBox.Leave += new System.EventHandler(this.debt_textBox_Leave);
@@ -443,7 +433,7 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.code_numericUpDown);
             this.groupBox1.Controls.Add(this.title_textBox);
-            this.groupBox1.Location = new System.Drawing.Point(42, 34);
+            this.groupBox1.Location = new System.Drawing.Point(23, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -512,13 +502,12 @@ namespace Muhasebe.Pages.SubPages.Current.AddsAndRemoves
             this.title_textBox.Name = "title_textBox";
             this.title_textBox.Size = new System.Drawing.Size(220, 26);
             this.title_textBox.TabIndex = 1;
-            this.title_textBox.Text = "Test2";
             // 
             // Transactions_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 742);
+            this.ClientSize = new System.Drawing.Size(1056, 665);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

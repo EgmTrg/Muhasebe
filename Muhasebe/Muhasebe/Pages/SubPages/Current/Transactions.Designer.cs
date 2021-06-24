@@ -30,13 +30,13 @@ namespace Muhasebe.Pages.SubPages.Current
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.edit_checkBox = new System.Windows.Forms.CheckBox();
             this.Search_ıconButton = new FontAwesome.Sharp.IconButton();
             this.Remove_ıconButton = new FontAwesome.Sharp.IconButton();
             this.Add_ıconButton = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.edit_checkBox = new System.Windows.Forms.CheckBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,6 +50,24 @@ namespace Muhasebe.Pages.SubPages.Current
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1094, 61);
             this.panel1.TabIndex = 0;
+            // 
+            // edit_checkBox
+            // 
+            this.edit_checkBox.AutoSize = true;
+            this.edit_checkBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(111)))), ((int)(((byte)(81)))));
+            this.edit_checkBox.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.edit_checkBox.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.edit_checkBox.FlatAppearance.BorderSize = 3;
+            this.edit_checkBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.edit_checkBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(162)))), ((int)(((byte)(97)))));
+            this.edit_checkBox.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.edit_checkBox.Location = new System.Drawing.Point(846, 6);
+            this.edit_checkBox.Name = "edit_checkBox";
+            this.edit_checkBox.Size = new System.Drawing.Size(235, 47);
+            this.edit_checkBox.TabIndex = 2;
+            this.edit_checkBox.Text = "Edit Mode: DISABLE";
+            this.edit_checkBox.UseVisualStyleBackColor = false;
+            this.edit_checkBox.CheckedChanged += new System.EventHandler(this.edit_checkBox_CheckedChanged);
             // 
             // Search_ıconButton
             // 
@@ -113,45 +131,29 @@ namespace Muhasebe.Pages.SubPages.Current
             this.Add_ıconButton.UseVisualStyleBackColor = false;
             this.Add_ıconButton.Click += new System.EventHandler(this.Add_ıconButton_Click);
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 61);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1094, 587);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // edit_checkBox
-            // 
-            this.edit_checkBox.AutoSize = true;
-            this.edit_checkBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(111)))), ((int)(((byte)(81)))));
-            this.edit_checkBox.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.edit_checkBox.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.edit_checkBox.FlatAppearance.BorderSize = 3;
-            this.edit_checkBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
-            this.edit_checkBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(162)))), ((int)(((byte)(97)))));
-            this.edit_checkBox.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.edit_checkBox.Location = new System.Drawing.Point(846, 6);
-            this.edit_checkBox.Name = "edit_checkBox";
-            this.edit_checkBox.Size = new System.Drawing.Size(235, 47);
-            this.edit_checkBox.TabIndex = 2;
-            this.edit_checkBox.Text = "Edit Mode: DISABLE";
-            this.edit_checkBox.UseVisualStyleBackColor = false;
-            this.edit_checkBox.CheckedChanged += new System.EventHandler(this.edit_checkBox_CheckedChanged);
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 61);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(1094, 587);
+            this.dataGridView.TabIndex = 1;
+            this.dataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView_CellBeginEdit);
+            this.dataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellValueChanged);
             // 
             // Transactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.panel1);
             this.Name = "Transactions";
             this.Size = new System.Drawing.Size(1094, 648);
             this.Load += new System.EventHandler(this.Transactions_Page_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,7 +164,7 @@ namespace Muhasebe.Pages.SubPages.Current
         private FontAwesome.Sharp.IconButton Search_ıconButton;
         private FontAwesome.Sharp.IconButton Remove_ıconButton;
         private FontAwesome.Sharp.IconButton Add_ıconButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.CheckBox edit_checkBox;
     }
 }
