@@ -29,15 +29,15 @@ namespace Muhasebe.Pages
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Homepage");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("List");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Transactions");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Current Account", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("List");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Stock", new System.Windows.Forms.TreeNode[] {
-            treeNode11});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Homepage");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("List");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Transactions");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Current Account", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("List");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Stock", new System.Windows.Forms.TreeNode[] {
+            treeNode5});
             this.headerSettings_panel = new System.Windows.Forms.Panel();
             this.currentUsername_label = new System.Windows.Forms.Label();
             this.menuBar_HideOrShow_button = new System.Windows.Forms.Button();
@@ -92,32 +92,32 @@ namespace Muhasebe.Pages
             this.menubar_treeView.ForeColor = System.Drawing.Color.White;
             this.menubar_treeView.Location = new System.Drawing.Point(0, 39);
             this.menubar_treeView.Name = "menubar_treeView";
-            treeNode7.Name = "Node0";
-            treeNode7.Tag = "ChildNode";
-            treeNode7.Text = "Homepage";
-            treeNode7.ToolTipText = "Homepage";
-            treeNode8.Name = "Node2";
-            treeNode8.Tag = "ChildNode";
-            treeNode8.Text = "List";
-            treeNode8.ToolTipText = "Current_List";
-            treeNode9.Name = "Node3";
-            treeNode9.Tag = "ChildNode";
-            treeNode9.Text = "Transactions";
-            treeNode9.ToolTipText = "Current_Transactions";
-            treeNode10.Name = "Node1";
-            treeNode10.Tag = "ParentNode";
-            treeNode10.Text = "Current Account";
-            treeNode11.Name = "Node1";
-            treeNode11.Tag = "ChildNode";
-            treeNode11.Text = "List";
-            treeNode11.ToolTipText = "Stock_List";
-            treeNode12.Name = "Node0";
-            treeNode12.Tag = "ParentNode";
-            treeNode12.Text = "Stock";
+            treeNode1.Name = "Node0";
+            treeNode1.Tag = "ChildNode";
+            treeNode1.Text = "Homepage";
+            treeNode1.ToolTipText = "Homepage";
+            treeNode2.Name = "Node2";
+            treeNode2.Tag = "ChildNode";
+            treeNode2.Text = "List";
+            treeNode2.ToolTipText = "Current_List";
+            treeNode3.Name = "Node3";
+            treeNode3.Tag = "ChildNode";
+            treeNode3.Text = "Transactions";
+            treeNode3.ToolTipText = "Current_Transactions";
+            treeNode4.Name = "Node1";
+            treeNode4.Tag = "ParentNode";
+            treeNode4.Text = "Current Account";
+            treeNode5.Name = "Node1";
+            treeNode5.Tag = "ChildNode";
+            treeNode5.Text = "List";
+            treeNode5.ToolTipText = "Stock_List";
+            treeNode6.Name = "Node0";
+            treeNode6.Tag = "ParentNode";
+            treeNode6.Text = "Stock";
             this.menubar_treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode10,
-            treeNode12});
+            treeNode1,
+            treeNode4,
+            treeNode6});
             this.menubar_treeView.ShowPlusMinus = false;
             this.menubar_treeView.Size = new System.Drawing.Size(192, 648);
             this.menubar_treeView.TabIndex = 2;

@@ -29,10 +29,8 @@ namespace Muhasebe.Pages.SubPages.Current
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchValue_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.search_groupBox = new System.Windows.Forms.GroupBox();
             this.clearFilter_ıconButton = new FontAwesome.Sharp.IconButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -53,6 +51,7 @@ namespace Muhasebe.Pages.SubPages.Current
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 137);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -68,11 +67,6 @@ namespace Muhasebe.Pages.SubPages.Current
             this.searchValue_richTextBox.Size = new System.Drawing.Size(185, 48);
             this.searchValue_richTextBox.TabIndex = 2;
             this.searchValue_richTextBox.Text = "";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // search_groupBox
             // 
@@ -251,7 +245,6 @@ namespace Muhasebe.Pages.SubPages.Current
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RichTextBox searchValue_richTextBox;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.GroupBox search_groupBox;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton4;
